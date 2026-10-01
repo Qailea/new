@@ -1,0 +1,167 @@
+import { CompanyLicenseDetails, GuardVerificationResult, ServiceItem } from '../types';
+import guardFormationImg from '../assets/images/KNSK_Team.jpg';
+import patrolTruckImg from '../assets/images/KNSK_Patrol.jpg';
+import heroSecurityImg from '../assets/images/KNSK_Guards.jpg';
+import guardOfficer2Img from '../assets/images/KNSK_Guards.jpg';
+import guardOfficer3Img from '../assets/images/KNSK_Team.jpg';
+import patrolCommandImg from '../assets/images/KNSK_Operations.jpg';
+
+export const companyLicenseDetails: CompanyLicenseDetails = {
+  licenseNumber: 'KNSK-SEC-2015-089',
+  issuingBody: 'General Commissariat of National Police',
+  issuingMinistry: 'Ministry of Interior, Kingdom of Cambodia',
+  issueDate: '15 March 2015',
+  expiryDate: '31 December 2026 (Active & Valid)',
+  status: 'VALID_AND_VERIFIED',
+  taxIdentificationNumber: 'KNSK-TIN-109823471',
+  commercialRegNumber: 'Co. 88219/15E',
+  legalRepresentative: 'Lok Oknha Director-General of K.N.S.K Security Co., Ltd.',
+};
+
+export const verifiedGuardsDatabase: Record<string, GuardVerificationResult> = {
+  'KNSK-G-9942': {
+    guardId: 'KNSK-G-9942',
+    fullName: 'Sok Vanna (សុខ វណ្ណា)',
+    rank: 'Senior Guard Chief Officer',
+    assignedSite: 'ABA Bank Head Office Phnom Penh',
+    province: 'Phnom Penh',
+    status: 'ACTIVE',
+    issueDate: '10 Jan 2018',
+    expiryDate: '10 Jan 2027',
+    clearanceLevel: 'Class A - Unarmed & Armed Access Control',
+    badgeNumber: 'BDG-9942-HQ',
+    photoUrl: guardFormationImg,
+  },
+  'KNSK-G-1024': {
+    guardId: 'KNSK-G-1024',
+    fullName: 'Chan Rithy (ចាន់ ឫទ្ធី)',
+    rank: 'VIP Close Protection Officer',
+    assignedSite: 'Diplomatic Convoy Escort',
+    province: 'Phnom Penh',
+    status: 'ACTIVE',
+    issueDate: '15 Aug 2019',
+    expiryDate: '15 Aug 2027',
+    clearanceLevel: 'Class S - Tactical VIP Escort Certified',
+    badgeNumber: 'BDG-1024-VIP',
+    photoUrl: guardOfficer2Img,
+  },
+  'KNSK-G-5510': {
+    guardId: 'KNSK-G-5510',
+    fullName: 'Keo Sophea (កែវ សុភា)',
+    rank: 'Female Security Screening Officer',
+    assignedSite: 'Aeon Mall Sen Sok',
+    province: 'Phnom Penh',
+    status: 'ACTIVE',
+    issueDate: '01 Mar 2021',
+    expiryDate: '01 Mar 2027',
+    clearanceLevel: 'Class A - Visitor & Bag Screening',
+    badgeNumber: 'BDG-5510-FM',
+    photoUrl: heroSecurityImg,
+  },
+  'KNSK-G-8812': {
+    guardId: 'KNSK-G-8812',
+    fullName: 'Meas Samnang (មាស សំនាង)',
+    rank: 'Regional Patrol Supervisor',
+    assignedSite: 'Bavet Special Economic Zone Hub',
+    province: 'Svay Rieng',
+    status: 'ACTIVE',
+    issueDate: '05 May 2017',
+    expiryDate: '05 May 2027',
+    clearanceLevel: 'Class B - Industrial Patrol Lead',
+    badgeNumber: 'BDG-8812-SEZ',
+    photoUrl: guardOfficer3Img,
+  },
+};
+
+export const securityServicesList: ServiceItem[] = [
+  {
+    id: 'physical_guarding',
+    titleKey: 'svc_physical',
+    shortDescKey: 'svc_physical_desc',
+    fullDescKey: '24/7 static guard posts for commercial skyscrapers, banks, manufacturing plants, luxury boreys, and hotels.',
+    iconName: 'ShieldCheck',
+    features: [
+      'Access Control & Visitor Identification',
+      'Perimeter Watch & Anti-Intrusion Patrols',
+      'CCTV Monitoring Room Operation',
+      'Fire Safety & Emergency Evacuation Assistance',
+      'Bilingual Guard Options (Khmer, English, Chinese)',
+    ],
+    recommendedFor: ['Banks & Financial Institutions', 'Factories & SEZ Zones', 'Gated Communities & Boreys', 'Shopping Malls & Hotels'],
+  },
+  {
+    id: 'vip_escort',
+    titleKey: 'svc_vip',
+    shortDescKey: 'svc_vip_desc',
+    fullDescKey: 'High-echelon close protection officers (CPO) and executive motorcade escorts for diplomats, CEOs, and VIP guests.',
+    iconName: 'UserCheck',
+    features: [
+      'Tactical Threat Assessment & Route Planning',
+      'Discreet Close-Quarter Protection',
+      'Armored & Luxury Escort Vehicles',
+      'Airport Meet & Greet Fast Track Transit',
+      'Crisis Contingency & Rapid Extraction',
+    ],
+    recommendedFor: ['Foreign Delegations', 'Corporate Executives', 'Celebrities & Private Investors'],
+  },
+  {
+    id: 'cash_in_transit',
+    titleKey: 'svc_cash',
+    shortDescKey: 'svc_cash_desc',
+    fullDescKey: 'Armored cash-in-transit (CIT) transport with armed security escorts and GPS real-time vault monitoring.',
+    iconName: 'Truck',
+    features: [
+      'B6/B7 Level Armored Transport Vehicles',
+      'Armed Guards with National Police Clearance',
+      'Dual-Key Safe & Electronic Lock Control',
+      'Real-Time Vault GPS Tracking & Door Sensors',
+      'Armed Police Escort & Secured Vault Protocol',
+    ],
+    recommendedFor: ['Commercial Banks', 'ATM Replenishment Networks', 'Gold & Jewelry Retailers'],
+  },
+  {
+    id: 'event_security',
+    titleKey: 'svc_event',
+    shortDescKey: 'svc_event_desc',
+    fullDescKey: 'End-to-end security design for international summits, concerts, exhibitions, and corporate galas.',
+    iconName: 'CalendarCheck',
+    features: [
+      'Crowd Management & Queue Control',
+      'Metal Detector & Baggage Screening Gates',
+      'Emergency Medical & First Aid Stations',
+      'VIP Backstage & Green Room Protection',
+      'Traffic Management & Parking Logistics',
+    ],
+    recommendedFor: ['International Conferences', 'Concerts & Sports Summits', 'Corporate Product Launches'],
+  },
+  {
+    id: 'electronic_security',
+    titleKey: 'svc_electronic',
+    shortDescKey: 'svc_electronic_desc',
+    fullDescKey: 'Integrated AI security hardware, smart cameras, electronic patrol wands, and biometric access controls.',
+    iconName: 'Cpu',
+    features: [
+      'AI Camera Analytics (Loitering, Intrusion, License Plate)',
+      'Biometric Door Locks & RFID Turnstiles',
+      'Real-Time GPS Guard Patrol Wand System',
+      '24/7 Remote Command Center Alarm Monitoring',
+      'Mobile App Incident Reporting Alert System',
+    ],
+    recommendedFor: ['Smart Factories', 'High-Tech Office Towers', 'Data Centers & Warehouses'],
+  },
+  {
+    id: 'mobile_patrol',
+    titleKey: 'svc_mobile_patrol',
+    shortDescKey: 'svc_mobile_patrol_desc',
+    fullDescKey: 'Motorized and vehicle rapid patrol teams providing random inspections and immediate backup.',
+    iconName: 'Radio',
+    features: [
+      'Randomized Day & Night Security Checkpoints',
+      'Visual Alarm Verification & Rapid Dispatch',
+      'Incident Logs Delivered Daily via Portal',
+      'High-Visibility Vehicle Patrol Patrol Lights',
+      'Immediate Emergency Backup Arrival & Dispatch',
+    ],
+    recommendedFor: ['Industrial Parks', 'Residential Neighborhoods', 'Unattended Commercial Sites'],
+  },
+];
